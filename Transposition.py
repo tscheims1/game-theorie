@@ -20,10 +20,10 @@ trans = Transposition()
 a = np.zeros((6, 7), dtype=np.uint8)
 b = object()
 c = object()
-a[0][1] = 1
+
 print (str(trans.addAndCheck(a,b)))
 print (str(trans.addAndCheck(a,c)))
 print (str(trans.addAndCheck(a,b)))
 a[0][1] = 1
-print (str(trans.addAndCheck(a,b)))
+print (str(trans.addAndCheck(a,c)))
 
