@@ -1,4 +1,4 @@
-
+import numpy as np
 class Transposition(object):
 	def __init__(self):
 		#hash-map
@@ -17,9 +17,13 @@ class Transposition(object):
 
 
 trans = Transposition()
-a = [1,2,3,4]
-print (str(trans.addAndCheck(a,a)))
-print (str(trans.addAndCheck(a,1)))
-print (str(trans.addAndCheck(a,a)))
-
+a = np.zeros((6, 7), dtype=np.uint8)
+b = object()
+c = object()
+a[0][1] = 1
+print (str(trans.addAndCheck(a,b)))
+print (str(trans.addAndCheck(a,c)))
+print (str(trans.addAndCheck(a,b)))
+a[0][1] = 1
+print (str(trans.addAndCheck(a,b)))
 
