@@ -4,16 +4,16 @@ class Transposition(object):
 		#hash-map
 		self.dict = {}
 	
-	#Return 0 if the node can clipped
+	#Return the already calculated node or None
 	def addAndCheck(self,board,node):
 		obj = self.dict.get(str(board))
 		if(obj == node):
-			return 1
+			return None
 		if(obj == None):
 			self.dict[str(board)] = node
-			return 1
+			return None
 		else:
-			return 0
+			return obj
 
 
 trans = Transposition()
